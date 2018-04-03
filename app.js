@@ -4,7 +4,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var sortJsonArray = require('sort-json-array');
 let Book = require('./models/book');
-mongoose.connect('mongodb://localhost/test');
+//mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://heroku_pzst43f2:ilflp3cdbg5vep11fb6smtp33k@ds231739.mlab.com:31739/heroku_pzst43f2');
 
 var books = require('./routes/books');
 
