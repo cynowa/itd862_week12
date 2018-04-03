@@ -1,0 +1,16 @@
+extends layout.pug
+
+//- Edit individual book entry 
+block content
+  h1.mt-5= title
+  form(method="POST")
+    .form-group
+      label(for='title') Title
+      input#title.form-control(type='text', required, placeholder='Enter title', name="title", value=book.title)
+    .form-group
+      label(for='author') Author
+      input#author.form-control(type='text', required, placeholder='Enter author', name="author", value=book.author)
+    .form-group
+      label(for='numPages') Number of Pages
+      input#numPages.form-control(type='number', min='0', required, placeholder='Enter number of pages', name="numPages", value=book.numPages)
+    button.btn.btn-primary(type='submit') Submit
